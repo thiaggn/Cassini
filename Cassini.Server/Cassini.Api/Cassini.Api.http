@@ -1,0 +1,6 @@
+@Cassini.Api_HostAddress = http://localhost:5021
+
+GET {{Cassini.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
