@@ -1,0 +1,22 @@
+.logo-wrapper {
+  display: flex;
+  gap: 5px;
+  height: 30px;
+  width: fit-content;
+
+  .icon {
+    background-image: url("../../../public/img/saturn.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    height: 100%;
+    aspect-ratio: 1 / 1;
+
+  }
+
+  .text {
+    font-family: 'Cabinet Grotesk', 'Segoe UI', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+  }
+}

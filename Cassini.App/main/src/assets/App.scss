@@ -1,0 +1,11 @@
+.app {
+  display: grid;
+  grid-template-columns: 70px 300px 1fr;
+  grid-template-rows: 100vh;
+
+  > *:not(:first-child) {
+    border-left: rgba(255, 255, 255, 0.1) 1px solid;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+  }
+}
