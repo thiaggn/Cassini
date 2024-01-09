@@ -1,12 +1,13 @@
 import "./styles/Navbar.scss";
-import {Button} from "../components/Button";
+import {NavbarButton} from "../components/NavbarButton";
 export function Navbar() {
     return <div className='navbar'>
-        <div className='button-list'>
-            <Button iconClass='start'></Button>
-            <Button iconClass='search'></Button>
-            <Button iconClass='settings'></Button>
-            <Button iconClass='compose'></Button>
+
+        <div className='list'>
+            <NavbarButton icon='start'></NavbarButton>
+            <NavbarButton icon='search'></NavbarButton>
+            <NavbarButton icon='settings'></NavbarButton>
+            <NavbarButton icon='compose'></NavbarButton>
         </div>
     </div>
 }

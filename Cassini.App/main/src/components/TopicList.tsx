@@ -1,26 +1,28 @@
+import "./styles/Topics.scss";
 import {Topic} from "../types/Documents";
-import {Button} from "./Button";
-import "./styles/TopicList.scss";
+import {ReactNode, useEffect, useState} from "react";
+import {MappedArray} from "../utils/MappedArray";
+import {API} from "../utils/API";
+import {TopicButton} from "./TopicButton";
 
 type Properties = {
-    openSubject: (subject: Topic) => void,
-    topics: Topic[]
+    openTopic: (subject: Topic) => void
 }
 
-export function TopicList({openSubject, topics}: Properties) {
+export function TopicList({openTopic}: Properties) {
+    const [topics, setTopics] = useState<MappedArray<Topic> | null>(null);
 
-    const handleTopicOpen = () => {
-        
-    }
+    useEffect(()=> {
+        const topics: Topic[] = API.getTopics();
+        const keyedTopics: MappedArray<Topic> = new MappedArray(topics);
+        setTopics(keyedTopics);
+    },[])
 
-    return <div className='topic-sidebar-view'>
-        <div className='wrapper'>
-            <div className='title'>Tópicos</div>
-        </div>
-        <div className='topic-list'>
-            {topics.map((topic: Topic) => {
-                let icon = <div className={'strip-icon'} style={{background: topic.color}}></div>
-                return <Button key={topic.id} className={'topic-button'} useCustomIcon={icon}>{topic.title}</Button>
+
+    return <div className='topic-view'>
+        <div className='list'>
+            {topics && topics.map<ReactNode>((topic: Topic, key: number) => {
+                return <TopicButton key={key} topic={topic}/>
             })}
         </div>
     </div>

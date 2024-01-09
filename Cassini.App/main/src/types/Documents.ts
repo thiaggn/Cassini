@@ -2,16 +2,16 @@ export type Topic = {
     id: number,
     title: string,
     color: TopicColor,
-    content: (Section | Document)[]
+    content: (Section | Page)[]
 }
 
 export type Section = {
     id: number,
     title: string,
-    pages: Document[]
+    pages: Page[]
 }
 
-export type Document = {
+export type Page = {
     id: number,
     title: string,
     blocks: Block[]

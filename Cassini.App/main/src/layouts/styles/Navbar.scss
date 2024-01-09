@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
 
-  .button-list {
+  .list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,6 +24,8 @@
       }
 
       .icon {
+        background-size: contain;
+        background-repeat: no-repeat;
         width: 100%;
         aspect-ratio: 1 / 1;
         filter: invert(1);

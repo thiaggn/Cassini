@@ -6,15 +6,29 @@
     <projectFile profileName="https">Cassini.Api/Cassini.Api.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="853c92e0-6277-4def-8aa2-c5b045852e81" name="Changes" comment="" />
+    <list default="true" id="853c92e0-6277-4def-8aa2-c5b045852e81" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Cassini.App/main/src/utils/Wrapper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cassini.App/main/src/components/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Cassini.App/main/src/components/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cassini.App/main/src/components/TopicList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Cassini.App/main/src/components/TopicList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cassini.App/main/src/layouts/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Cassini.App/main/src/layouts/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cassini.App/main/src/layouts/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Cassini.App/main/src/layouts/Sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cassini.App/main/src/layouts/styles/Sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Cassini.App/main/src/layouts/styles/Sidebar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cassini.App/main/src/lib/placeholder/CreatedTopics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Cassini.App/main/src/placeholders/CreatedTopics.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cassini.Api/obj/Debug/net8.0/Cassini.Api.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Cassini.Api/obj/Debug/net8.0/Cassini.Api.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cassini.Api/obj/Debug/net8.0/Cassini.Api.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Cassini.Api/obj/Debug/net8.0/Cassini.Api.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cassini.Api/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Cassini.Api/obj/project.packagespec.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2a2tZfOU23pDyRx3yg7VsVSpMvr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -24,6 +38,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -84,6 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703528561813</updated>
       <workItem from="1703528563722" duration="97000" />
+      <workItem from="1704741810439" duration="26000" />
     </task>
     <servers />
   </component>

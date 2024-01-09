@@ -4,7 +4,7 @@ import {ReactElement} from "react";
 type Properties = {
     view?: ReactElement
 }
-export function Page({view}: Properties) {
+export function Main({view}: Properties) {
     return <div className='view'>
         {view}
     </div>

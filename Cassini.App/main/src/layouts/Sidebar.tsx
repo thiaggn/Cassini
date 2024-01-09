@@ -2,36 +2,45 @@ import "./styles/Sidebar.scss";
 import {ReactElement, useState} from "react";
 import {SidebarView} from "../types/SidebarView";
 import {TopicList} from "../components/TopicList";
-import {PageList} from "../components/PageList";
-import {CreatedTopics} from "../lib/placeholder/CreatedTopics";
-import {Topic} from "../types/Documents";
+import {SectionList} from "../components/SectionList";
+import {Page, Topic} from "../types/Documents";
 import {Logo} from "../components/Logo";
 
-export function Sidebar() {
 
-    const [sidebarView, setSidebarView] = useState<SidebarView>(SidebarView.SubjectList);
+type Properties = {
+    openPage: (page: Page) => void,
+    openTopic: (topic: Topic) => void
+}
+export function Sidebar({openPage, openTopic}: Properties) {
 
-    let viewElement: ReactElement;
+    const [sidebarView, setSidebarView] = useState<SidebarView>(SidebarView.TopicList);
+    const [selectedTopic, setSelectedTopic] = useState<Topic>();
+
+    let viewElement: ReactElement = <div>Erro</div>;
 
     switch (sidebarView) {
-        case SidebarView.SubjectList:
-            const handleSubjectOpen = (subject: Topic): void => {
-                setSidebarView(SidebarView.PageList);
+        case SidebarView.TopicList:
+            const handleTopicOpen = (topic: Topic): void => {
+                setSelectedTopic(topic);
+                setSidebarView(SidebarView.TopicSections);
             }
 
-            viewElement = <TopicList topics={CreatedTopics} openSubject={handleSubjectOpen}/>;
+            viewElement = <TopicList openTopic={handleTopicOpen}/>;
             break;
 
-        case SidebarView.PageList:
+        case SidebarView.TopicSections:
+            if(selectedTopic == null) break;
             const handlePageOpen = () => {
 
             }
 
-            viewElement = <PageList openPage={handlePageOpen}/>
+            viewElement = <SectionList selectedTopic={selectedTopic} openPage={handlePageOpen}/>
+            break;
     }
 
     return <div className='sidebar'>
         <Logo/>
+        <div className='header'>Tópicos</div>
         {viewElement}
     </div>
 }
