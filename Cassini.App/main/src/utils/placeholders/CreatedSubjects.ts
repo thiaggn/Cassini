@@ -1,10 +1,26 @@
-import {Topic, TopicColor} from "../../types/Documents";
+import {Subject, TopicColor} from "../../types/Documents";
 
-export let CreatedTopics: Topic[] = [
+export let CreatedSubjects: Subject[] = [
     {
         id: 245035,
         title: 'Estrutura de dados',
-        content: [],
+        content: [
+            {
+                id: 134024,
+                title: 'Listas',
+                pages: []
+            },
+            {
+                id: 239433,
+                title: 'Árvores',
+                pages: []
+            },
+            {
+                id: 23942,
+                title: 'Grafos',
+                pages: []
+            }
+        ],
         color: TopicColor.Blue
     },
 
@@ -49,7 +65,6 @@ export let CreatedTopics: Topic[] = [
         content: [],
         color: TopicColor.Cyan
     },
-
 
 
 ]

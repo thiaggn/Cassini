@@ -1,4 +1,4 @@
 export enum SidebarView {
-    TopicList,
-    TopicSections
+    SubjectsList,
+    SubjectContent
 }

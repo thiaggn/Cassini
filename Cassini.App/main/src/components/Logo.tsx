@@ -1,4 +1,4 @@
-import "./styles/Logo.scss";
+import "./styles/LogoStyles.scss";
 export function Logo() {
     return <div className='logo-wrapper'>
         <div className='icon'></div>

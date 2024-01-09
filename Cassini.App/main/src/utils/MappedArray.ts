@@ -11,7 +11,6 @@ class ListItem<T> {
 
 export class MappedArray<T>{
 
-    // Depois ver se é mais rapido com Sets
     private items: Array<ListItem<T>> = [];
     constructor(array?: Array<T> | MappedArray<T>) {
 
@@ -31,7 +30,7 @@ export class MappedArray<T>{
         }
     }
 
-    public map<K>(callback: (value: T, key: number, index?: number) => K): K[] {
+    public map<K>(callback: (value: T, key: number, index: number) => K): K[] {
         return this.items.map((v: ListItem<T>, i: number) => callback(v.value, v.key, i));
     }
 

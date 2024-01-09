@@ -1,11 +1,11 @@
-export type Topic = {
+export type Subject = {
     id: number,
     title: string,
     color: TopicColor,
-    content: (Section | Page)[]
+    content: (PageCollection | Page)[]
 }
 
-export type Section = {
+export type PageCollection = {
     id: number,
     title: string,
     pages: Page[]

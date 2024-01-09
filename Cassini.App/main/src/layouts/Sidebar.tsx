@@ -1,40 +1,40 @@
 import "./styles/Sidebar.scss";
 import {ReactElement, useState} from "react";
 import {SidebarView} from "../types/SidebarView";
-import {TopicList} from "../components/TopicList";
-import {SectionList} from "../components/SectionList";
-import {Page, Topic} from "../types/Documents";
+import {SubjectList} from "../components/SubjectList";
+import {SubjectContent} from "../components/SubjectContent";
+import {Page, Subject} from "../types/Documents";
 import {Logo} from "../components/Logo";
 
 
 type Properties = {
     openPage: (page: Page) => void,
-    openTopic: (topic: Topic) => void
+    openTopic: (topic: Subject) => void
 }
 export function Sidebar({openPage, openTopic}: Properties) {
 
-    const [sidebarView, setSidebarView] = useState<SidebarView>(SidebarView.TopicList);
-    const [selectedTopic, setSelectedTopic] = useState<Topic>();
+    const [sidebarView, setSidebarView] = useState<SidebarView>(SidebarView.SubjectsList);
+    const [selectedTopic, setSelectedSubject] = useState<Subject>();
 
     let viewElement: ReactElement = <div>Erro</div>;
 
     switch (sidebarView) {
-        case SidebarView.TopicList:
-            const handleTopicOpen = (topic: Topic): void => {
-                setSelectedTopic(topic);
-                setSidebarView(SidebarView.TopicSections);
+        case SidebarView.SubjectsList:
+            const handleSubjectOpen = (topic: Subject): void => {
+                setSelectedSubject(topic);
+                setSidebarView(SidebarView.SubjectContent);
             }
 
-            viewElement = <TopicList openTopic={handleTopicOpen}/>;
+            viewElement = <SubjectList openSubject={handleSubjectOpen}/>;
             break;
 
-        case SidebarView.TopicSections:
+        case SidebarView.SubjectContent:
             if(selectedTopic == null) break;
             const handlePageOpen = () => {
 
             }
 
-            viewElement = <SectionList selectedTopic={selectedTopic} openPage={handlePageOpen}/>
+            viewElement = <SubjectContent subject={selectedTopic} openPage={handlePageOpen}/>
             break;
     }
 

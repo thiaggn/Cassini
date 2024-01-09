@@ -1,14 +1,31 @@
 @import "../../assets/sass/variables";
 
-.topic-view {
-  gap: 10px;
+@keyframes fade-out-animation {
+    from {
+      opacity: 1;
+    }
 
-  .list {
+    to {
+      opacity: 0;
+    }
+}
+
+
+.subject-view {
+  gap: 10px;
+  height: 100%;
+
+  .fade-out {
+    animation: fade-out-animation 200ms ease-in-out forwards;
+  }
+
+  > .list {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    height: 100%;
 
-    .topic-button {
+    > .topic-button {
       width: calc(100% + 4px);
       transform: translateX(-4px);
       display: flex;
@@ -24,7 +41,7 @@
         cursor: pointer;
       }
 
-      .icon {
+      > .icon {
         display: flex;
         align-items: center;
         height: 24px;
@@ -37,7 +54,7 @@
         }
       }
 
-      .text {
+      > .text {
         font-size: 1.3rem;
         line-height: 0;
       }

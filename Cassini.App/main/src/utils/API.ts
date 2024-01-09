@@ -1,9 +1,9 @@
-import {Topic} from "../types/Documents";
-import {CreatedTopics} from "./placeholders/CreatedTopics";
+import {Subject} from "../types/Documents";
+import {CreatedSubjects} from "./placeholders/CreatedSubjects";
 
 export class API {
-    static getTopics(): Topic[] {
-        return CreatedTopics;
+    static getTopics(): Subject[] {
+        return CreatedSubjects;
     }
     static getPageContent() {
 

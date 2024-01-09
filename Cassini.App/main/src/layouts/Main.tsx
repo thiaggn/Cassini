@@ -5,7 +5,7 @@ type Properties = {
     view?: ReactElement
 }
 export function Main({view}: Properties) {
-    return <div className='view'>
+    return <main className='main'>
         {view}
-    </div>
+    </main>
 }

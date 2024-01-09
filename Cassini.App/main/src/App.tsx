@@ -4,7 +4,7 @@ import {Navbar} from "./layouts/Navbar";
 import {Main} from "./layouts/Main";
 import {ReactElement, useState} from "react";
 import {MainView} from "./types/MainView";
-import {Page, Topic} from "./types/Documents";
+import {Page, Subject} from "./types/Documents";
 import {Editor} from "./layouts/Editor";
 
 export function App() {
@@ -17,7 +17,7 @@ export function App() {
         setCurrentView(MainView.PageEditor);
     }
 
-    const handleTopicOpen = (topic: Topic) => {
+    const handleTopicOpen = (topic: Subject) => {
 
     }
 

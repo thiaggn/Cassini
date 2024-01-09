@@ -1,0 +1,46 @@
+@import "../../assets/sass/variables";
+
+@keyframes icon-grow-animation {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+}
+
+.subject-content {
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+
+  > .header {
+    padding: 0 4px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 30px;
+    border-radius: 5px;
+    transition: 200ms;
+
+    > .subject-color {
+      animation: icon-grow-animation 200ms cubic-bezier(0, 0.97, 1, 1);
+      height: 24px;
+      width: 24px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    > .title {
+      font-size: 1.3rem;
+      line-height: 0;
+    }
+  }
+
+  > .list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
